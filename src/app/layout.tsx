@@ -1,4 +1,5 @@
 import './global.css';
+import Sidebar from './lib/components/sidebar/sidebar';
 
 export const metadata = {
   title: 'Welcome to algo-visualizer',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Sidebar />
+      </body>
     </html>
   );
 }
