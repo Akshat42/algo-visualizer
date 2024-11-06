@@ -1,4 +1,5 @@
 import './global.css';
+import Header from './lib/components/header/header';
 import Sidebar from './lib/components/sidebar/sidebar';
 
 export const metadata = {
@@ -14,8 +15,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
-        <Sidebar />
+        {/* container */}
+        <div className="w-full flex h-svh max-h-svh">
+          {/* left sidebar container */}
+          <div className="h-full flex-[0.3]">
+            <Sidebar />
+          </div>
+
+          <div className="h-full flex-1">
+            <div className="flex h-full flex-col justify-between overflow-y-scroll">
+              <div className="sticky top-0 w-full">
+                <Header />
+              </div>
+
+              {/** Main Content */}
+              <div>
+                <h1 className="text-center text-xl">{children}</h1>
+              </div>
+
+              {/** Footer */}
+              <div className="w-full">
+                <div className="bg-yellow-600 py-12">
+                  <h1 className="text-center text-xl">Footer</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );
