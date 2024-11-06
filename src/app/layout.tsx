@@ -1,8 +1,8 @@
 import './global.css';
-import Footer from './lib/components/footer/footer';
-import Header from './lib/components/header/header';
-import Sidebar from './lib/components/sidebar/sidebar';
-import RajdhaniFontClass from './lib/typography/font';
+import Footer from '@components/footer/footer';
+import Header from '@components/header/header';
+import Sidebar from '@components/sidebar/sidebar';
+import RajdhaniFontClass from '@typography/font';
 
 export const metadata = {
   title: 'Welcome to algo-visualizer',

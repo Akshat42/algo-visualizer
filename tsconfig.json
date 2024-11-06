@@ -13,7 +13,6 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
     "jsx": "preserve",
     "allowJs": true,
     "esModuleInterop": true,
@@ -29,12 +28,17 @@
         "name": "next"
       }
     ],
-    "types": ["node"]
+    "types": ["node"],
+    "baseUrl": "./src/app/",
+    "paths": {
+      
+      "@components/*": ["lib/components/*"],
+      "@typography/*": ["lib/typography/*"],
+    },
   },
   "exclude": [
     "node_modules",
     "tmp",
-    "jest.config.ts",
     "src/**/*.spec.ts",
     "src/**/*.test.ts",
     "dist/algo-visualizer/**/*"
