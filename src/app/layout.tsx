@@ -2,6 +2,7 @@ import './global.css';
 import Footer from './lib/components/footer/footer';
 import Header from './lib/components/header/header';
 import Sidebar from './lib/components/sidebar/sidebar';
+import RajdhaniFontClass from './lib/typography/font';
 
 export const metadata = {
   title: 'Welcome to algo-visualizer',
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={RajdhaniFontClass.className}>
         {/* container */}
         <div className="w-full flex h-svh max-h-svh">
           {/* left sidebar container */}
