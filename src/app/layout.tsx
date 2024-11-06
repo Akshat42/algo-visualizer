@@ -1,4 +1,5 @@
 import './global.css';
+import Footer from './lib/components/footer/footer';
 import Header from './lib/components/header/header';
 import Sidebar from './lib/components/sidebar/sidebar';
 
@@ -35,9 +36,7 @@ export default function RootLayout({
 
               {/** Footer */}
               <div className="w-full">
-                <div className="bg-yellow-600 py-12">
-                  <h1 className="text-center text-xl">Footer</h1>
-                </div>
+                <Footer />
               </div>
             </div>
           </div>
