@@ -20,9 +20,8 @@ export default function RootLayout({
         {/* container */}
         <div className="w-full flex h-svh max-h-svh">
           {/* left sidebar container */}
-          <div className="h-full flex-[0.3]">
-            <Sidebar />
-          </div>
+
+          <Sidebar />
 
           <div className="h-full flex-1">
             <div className="flex h-full flex-col justify-between overflow-y-scroll">

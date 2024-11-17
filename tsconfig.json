@@ -34,7 +34,8 @@
       
       "@components/*": ["lib/components/*"],
       "@typography/*": ["lib/typography/*"],
-      "@assets/*": ["lib/assets/*"]
+      "@assets/*": ["lib/assets/*"],
+      "@constants/*": ["lib/constants/*"]
     },
   },
   "exclude": [
