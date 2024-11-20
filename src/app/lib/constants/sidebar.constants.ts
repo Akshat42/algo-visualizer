@@ -2,10 +2,12 @@ import { LinkProps } from 'next/link';
 
 interface NavList {
   headerText: string;
-  subMenu: {
-    subMenuText: string;
-    navLinks: NavLink[];
-  }[];
+  subMenu: NavLinkItem[];
+}
+
+export interface NavLinkItem {
+  subMenuText: string;
+  navLinks: NavLink[];
 }
 
 interface NavLink {
