@@ -25,7 +25,7 @@ export default function RootLayout({
 
                     <div className="h-full flex-1">
                         <div className="flex h-full flex-col justify-between overflow-y-scroll">
-                            <div className="sticky top-0 w-full z-20">
+                            <div className="sticky top-0 w-full z-30">
                                 <Header />
                             </div>
 

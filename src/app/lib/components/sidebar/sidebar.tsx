@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
     return (
         <aside
             className={
-                'h-full min-w-40 w-[15vw]  z-10 ' + getToggleSidebarClasses()
+                'h-full min-w-40 w-[15vw]  z-20 ' + getToggleSidebarClasses()
             }
         >
             <div className="bg-gray-800 text-white overflow-auto pt-14 h-full">
