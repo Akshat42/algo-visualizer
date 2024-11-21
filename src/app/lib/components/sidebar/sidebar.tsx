@@ -8,16 +8,20 @@ import { useSidebarStore } from 'lib/store/sidebar.store';
 const Sidebar: React.FC = () => {
     const { isSideBarOpen } = useSidebarStore();
 
-    function getSidebarClasses() {
+    function getToggleSidebarClasses() {
         if (isSideBarOpen) {
-            return 'h-full min-w-40 w-[15vw] absolute';
+            return 'absolute';
         } else {
             return 'hidden';
         }
     }
     return (
-        <aside className={getSidebarClasses()}>
-            <div className="h-full bg-gray-800 text-white overflow-auto pt-14 ">
+        <aside
+            className={
+                'h-full min-w-40 w-[15vw]  z-10 ' + getToggleSidebarClasses()
+            }
+        >
+            <div className="bg-gray-800 text-white overflow-auto pt-14 h-full">
                 {NavLinkList.map((navCategory) => {
                     return (
                         <div className="p-3 border-t-4 border-gray-600 ">
