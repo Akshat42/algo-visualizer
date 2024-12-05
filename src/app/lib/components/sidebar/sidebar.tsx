@@ -4,22 +4,16 @@ import NavLinkList from '@constants/sidebar.constants';
 import React from 'react';
 import SidebarMenuItem from './sidebar-item/sidebar-menu-item';
 import { useSidebarStore } from 'lib/store/sidebar.store';
+import { motion } from 'motion/react';
 
 const Sidebar: React.FC = () => {
     const { isSideBarOpen } = useSidebarStore();
 
-    function getToggleSidebarClasses() {
-        if (isSideBarOpen) {
-            return 'absolute';
-        } else {
-            return 'hidden';
-        }
-    }
     return (
-        <aside
-            className={
-                'h-full min-w-40 w-[15vw]  z-20 ' + getToggleSidebarClasses()
-            }
+        <motion.aside
+            layout
+            style={{ display: isSideBarOpen ? 'block' : 'none' }}
+            className={'h-full min-w-40 w-[15vw] z-20 absolute'}
         >
             <div className="bg-gray-800 text-white overflow-auto pt-14 h-full">
                 {NavLinkList.map((navCategory) => {
@@ -40,7 +34,7 @@ const Sidebar: React.FC = () => {
                     );
                 })}
             </div>
-        </aside>
+        </motion.aside>
     );
 };
 
